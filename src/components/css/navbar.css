@@ -1,0 +1,124 @@
+.navbar {
+    position:fixed;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    height: 15vh;
+    z-index: 1000;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navbar .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    animation: fade 5s infinite; /* Slide in animation for the logo */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 23px;
+    position: relative;
+}
+
+/* Cool hover effect with underline grow animation */
+.navbar ul li a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Button in the navbar (Order Now) */
+.navbar .login {
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar .login:hover {
+    background-color: rgba(0, 0, 0, 0.247);
+    color: white;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* Responsive navbar for mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .order-now {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Extra animations for smooth hover effect */
+.navbar ul li a:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover:after {
+    transform: scaleX(1);
+}
+
+.dark-nav{
+    background-color: rgb(37, 32, 72)
+}
